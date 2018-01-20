@@ -8,7 +8,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index')) 
   .get('/db', (req, res) => res.render('pages/db'))
-  .get(/test\/.*$/, (req, res) => {
+  .get(/pages\/.*$/, (req, res) => {
 	var file = req.path.replace('/test/', '');
 	
 	//res.send(req.path);
