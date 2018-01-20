@@ -8,8 +8,9 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index')) 
   .get('/db', (req, res) => res.render('pages/db'))
-  .get(/test/.*$/, (req, res) => {
+  .get(/test\/.*$/, (req, res) => {
 	res.send(req.path);
+	res.end();
 	//res.render('pages/test')
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
