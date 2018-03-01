@@ -5,8 +5,21 @@
 </head>
 
 <body>
-this is static page
+this is static page.
+<br>
+There are available files:
+<br>
 
+<% 
+   data.forEach((file) => {   
+   let file_cur = file.replace('views/html', '');     
+%>
+
+<a href="<%=file_cur %>"><%=file_cur %></a><br>
+
+<%
+});
+%>
 
 
 </body>
