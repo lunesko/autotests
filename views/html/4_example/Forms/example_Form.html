@@ -3,109 +3,73 @@
    <head>
       <meta charset="utf-8" />
       <title>HTML Document</title>
+      <link href="css/style.css" rel="stylesheet">
    </head>
    <body>
-    <h2>Формы на сайте</h2>
+    <script>
+function send(form) {
+    var result = "";
+    for (var i =0; i<form.elements.length; i++) {
+         result += "<p>" + form.elements[i].name + " : " + form.elements[i].value + "</p>"; 
+    }
+    document.getElementById('result').innerHTML = result;
+    return false;
+}
+</script>
 
-    <h3>Виды веб-форм</h3>
+    <h2>Виды веб-форм</h2>
 
-
-    <div>
-    <h4>Поле для ввода адреса электронной почты</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" > 
-        <input autocomplete="on" type="email" autofocus placeholder="me@example.com" required>
-        <input type="submit" name="submit" value="Кнопка">
-        </form>
-    </div>
-    <br>
-    <br>
-
-    <div>
-    <h4>Поле для ввода URL-адреса</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" > 
-        <input type="url">
-        <input type="submit" name="submit" value="Кнопка">
-        </form>
-    </div>
-    <br>
-    <br>
-
-    <div>
-    <h4>Ползунок</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" > 
+   
+    <form onsubmit="send(this);return false;" action="example_Form.html"  method="GET" > 
+        <p class="one">Поле для ввода адреса электронной почты: </p>
+        <input autocomplete="on" type="email" autofocus placeholder="me@example.com" name="email">
+        <!--<input autocomplete="on" type="email" autofocus placeholder="me@example.com" name="email" required> -->
+        <br><br>
+        <p class="one">Поле для ввода URL-адреса: </p>
+        <input type="url" placeholder="http://example.com" name="url" >
+        <br><br>
+        <p class="one">Ползунок: </p>
         <input type="range" name="range" min="1" max="100" step="1" value="50">
-        <input type="submit" name="submit" value="Кнопка">
+        <br><br>
+        <p class="one">Поле для ввода числовых данных, часто в виде элемента-счетчика: </p>
+        <input type="number" min="2" max="10" name="number">
+        <br><br>
+        <p class="one">Поле для ввода числовых данных, часто в виде элемента-счетчика: </p>
+        <input type="color" name="color">
+        <br><br>
+        <p class="one">Поле для ввода даты. Поддерживаются типы date, month и week: </p>
+        <input id="date" type="date" name="date">
+        <br><br>
+        <p class="one">Поле для ввода даты со временем: </p>
+        <!--<input id="datetime" type="datetime"> - Устарело !!! -->
+       <input id="datetime" type="datetime-local" name="datetime-local">
+       <input id="time" type="time" name="time">
+        <br><br>
+        <p class="one">Поле для ввода ключевых слов поиска: </p>
+        <input type="search" name="search">
+        <br><br>
+        <p class="one">Поле для ввода текста: </p>
+        <input type="text" name="text">
+        <br><br>
+        <p class="one">Кнопка для отправки файлов: </p>
+        <input type="file" name="file" id="file"/>
+        <br><br>
+        <button type="reset" name="reset">Reset</button>
+        <input type="submit" name="submit" value="Кнопка">     
         </form>
-    </div>
-    <br>
-    <br>
+    
+    <div id="result"></div>
+    
+   
+       
 
-    <div>
-    <h4>Поле для ввода числовых данных, часто в виде элемента-счетчика</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" > 
-       <input type="number" min="2" max="10">
-       <input type="submit" name="submit" value="Кнопка">
-        </form>
-    </div>
-    <br>
-    <br>
-
-    <div>
-    <h4>Поле для ввода числовых данных, часто в виде элемента-счетчика</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" >
-       <input type="color" name="">
-       <input type="submit" name="submit" value="Кнопка">
-    </div>
-    <br>
-    <br>
-
-
-    <div>
-    <h4>Поле для ввода даты. Поддерживаются типы date, month и week</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" >
-       <input id="date" type="date">
-       <input type="submit" name="submit" value="Кнопка">
-    </div>
-    <br>
-    <br>
-
-     <div>
-    <h4>Поле для ввода даты со временем</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" >
-       <!--<input id="datetime" type="datetime"> - Устарело !!! -->
-       <input id="datetime" type="datetime-local">
-       <input id="time" type="time">     
-       <input type="submit" name="submit" value="Кнопка">
-    </div>
-    <br>
-    <br>
-
-    <div>
-    <h4>Поле для ввода ключевых слов поиска</h4>
-    <form action="example_Form.html" name="MyForm" method="GET" >
-       <input type="search">     
-       <input type="submit" name="submit" value="Поиск">
-    </div>
-    <br>
-    <br>
-
-
-    <form action="example_Form.html" name="MyForm" method="GET" > 
+    
+    <form action="example_Form.html" method="GET" > 
     	<!-- accept-charset="utf-8" enctype="text/liain" method="GET" novalidate autocomplete="on" -->
     	<!-- enctype -->
 <!-- application/x-www-form-urlencodedВместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).multipart/form-dataДанные не кодируются. Это значение применяется при отправке файлов.text/plainПробелы заменяются знаком +, буквы и другие символы не кодируются. -->
 
-
-
-    	<!-- <form name="MyForm" > -->
-	    <!-- <input type="text" name="first_name" value="что нибудь" > autofocus - Поддержка передачи фокуса конкретному элементу формы. -->
-	   <!--  ОЧИСТКА ПОЛЯ !!! -->
-	   <br>
-
-    	<input type="text" name="first_name1" placeholder="Ваше имя" required> 
-
-    	<!-- id
-    	label -->
+    	
 				<br>
 				<fieldset title="текст">
 				<label for="first_name1">Ваше имя: </label>
@@ -149,63 +113,18 @@
 
     	<button type="reset" name="reset">Reset</button>
 
-    	
-
-    	
-
-    	<!-- <div>
-    		<input type="email" name="">
-    	</div>
-    	
-    	<div>
-    		<input type="search">
-    	</div> -->
-
-    	<div>
-    		<input type="url">
-    	</div>
-<div>
-    	<input type="file" name="file" id="file"/>
-    	</div>
-
-    	<div>
-    		<input type="number" min="2" max="10"> 
-    	</div>
-
-
-
-    	
-				 
-				 
-				 <div>
-				 
-				 <input id="date" name="date" type="date"/>
-				 </div>
-
     </form>
 
 <!-- <input type="button">
 <input type="checkbox">
-<input type="color">
-<input type="date">
-<input type="datetime">
-<input type="datetime-local">
-<input type="email">
-<input type="file">
+
 <input type="hidden">
 <input type="image">
 <input type="month">
-<input type="number">
 <input type="password">
 <input type="radio">
-<input type="range">
 <input type="reset">
-<input type="search">
-<input type="submit">
 <input type="tel">
-<input type="text">
-<input type="time">
-<input type="url">
 <input type="week"> -->
 
     
