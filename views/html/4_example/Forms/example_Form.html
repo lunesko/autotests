@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>HTML Document</title>
+   </head>
+   <body>
+    <h2>Формы на сайте</h2>
+
+    <h3>Виды веб-форм</h3>
+
+
+    <div>
+    <h4>Поле для ввода адреса электронной почты</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" > 
+        <input autocomplete="on" type="email" autofocus placeholder="me@example.com" required>
+        <input type="submit" name="submit" value="Кнопка">
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <div>
+    <h4>Поле для ввода URL-адреса</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" > 
+        <input type="url">
+        <input type="submit" name="submit" value="Кнопка">
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <div>
+    <h4>Ползунок</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" > 
+        <input type="range" name="range" min="1" max="100" step="1" value="50">
+        <input type="submit" name="submit" value="Кнопка">
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <div>
+    <h4>Поле для ввода числовых данных, часто в виде элемента-счетчика</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" > 
+       <input type="number" min="2" max="10">
+       <input type="submit" name="submit" value="Кнопка">
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <div>
+    <h4>Поле для ввода числовых данных, часто в виде элемента-счетчика</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" >
+       <input type="color" name="">
+       <input type="submit" name="submit" value="Кнопка">
+    </div>
+    <br>
+    <br>
+
+
+    <div>
+    <h4>Поле для ввода даты. Поддерживаются типы date, month и week</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" >
+       <input id="date" type="date">
+       <input type="submit" name="submit" value="Кнопка">
+    </div>
+    <br>
+    <br>
+
+     <div>
+    <h4>Поле для ввода даты со временем</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" >
+       <!--<input id="datetime" type="datetime"> - Устарело !!! -->
+       <input id="datetime" type="datetime-local">
+       <input id="time" type="time">     
+       <input type="submit" name="submit" value="Кнопка">
+    </div>
+    <br>
+    <br>
+
+    <div>
+    <h4>Поле для ввода ключевых слов поиска</h4>
+    <form action="example_Form.html" name="MyForm" method="GET" >
+       <input type="search">     
+       <input type="submit" name="submit" value="Поиск">
+    </div>
+    <br>
+    <br>
+
+
+    <form action="example_Form.html" name="MyForm" method="GET" > 
+    	<!-- accept-charset="utf-8" enctype="text/liain" method="GET" novalidate autocomplete="on" -->
+    	<!-- enctype -->
+<!-- application/x-www-form-urlencodedВместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).multipart/form-dataДанные не кодируются. Это значение применяется при отправке файлов.text/plainПробелы заменяются знаком +, буквы и другие символы не кодируются. -->
+
+
+
+    	<!-- <form name="MyForm" > -->
+	    <!-- <input type="text" name="first_name" value="что нибудь" > autofocus - Поддержка передачи фокуса конкретному элементу формы. -->
+	   <!--  ОЧИСТКА ПОЛЯ !!! -->
+	   <br>
+
+    	<input type="text" name="first_name1" placeholder="Ваше имя" required> 
+
+    	<!-- id
+    	label -->
+				<br>
+				<fieldset title="текст">
+				<label for="first_name1">Ваше имя: </label>
+    	    	<input type="text" id="first_name1" name="first_name1" placeholder="Ваше имя" > 
+    	
+
+
+    	<br>
+    	<br>
+				Password: <input type="password" name="password">
+				</fieldset>
+    	<br>
+    	<br>
+    			Ваш пол : <input type="radio" value="male" name="sex" checked >Мужской | <input type="radio" value="female" name="sex">Женский <!-- не работает как надо !!! надо добавить name -->
+
+    	<br>
+    	<br>
+				<textarea name="comments">
+					
+				</textarea>
+				 <!-- rows cols -->
+    	<br>
+    	<br>
+
+    			<input type="checkbox" value="1">Запомнить
+    	<br>
+    	<br>
+    	<input type="submit" name="submit" value="Кнопка">
+		<br>
+    	<br>
+    	<input type="text" list="mydata" > <br><br>
+    	<datalist id="mydata">
+    		<option label="грн" value="гривны">
+    		<option label="$" value="доллар">
+    	
+    	</datalist>
+
+    	<input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
+
+    	<br>
+
+    	<button type="reset" name="reset">Reset</button>
+
+    	
+
+    	
+
+    	<!-- <div>
+    		<input type="email" name="">
+    	</div>
+    	
+    	<div>
+    		<input type="search">
+    	</div> -->
+
+    	<div>
+    		<input type="url">
+    	</div>
+<div>
+    	<input type="file" name="file" id="file"/>
+    	</div>
+
+    	<div>
+    		<input type="number" min="2" max="10"> 
+    	</div>
+
+
+
+    	
+				 
+				 
+				 <div>
+				 
+				 <input id="date" name="date" type="date"/>
+				 </div>
+
+    </form>
+
+<!-- <input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week"> -->
+
+    
+
+
+   </body>
+</html>
