@@ -20,18 +20,18 @@ $("h2").css("color","red");
 // 	 jQuery("h2").html("Подменили текст");
 // })
 
-// $("h2").html("Подменили текст");
+$("h2").html("Подменили текст");
 
-// $('#btn_start').click(function(){
-// 		$('#message')
-// 		.html("New Message")
-// 		.css("background-color","red")
-// 		.parent()
-// 		.css("background-color","green")
-// 		.width(150)
-// 		.height(80)
-// });
+$('#btn_start').click(function(){
+		$('#message')
+		.html("New Message")
+		.css("background-color","red")
+		.parent()
+		.css("background-color","green")
+		.width(150)
+		.height(80)
+});
 
-// // $('#btn_reset').click(function(){
-// // 	location.reload();
-// });
+// $('#btn_reset').click(function(){
+// 	location.reload();
+});
