@@ -32,6 +32,6 @@ $('#btn_start').click(function(){
 		.height(80)
 });
 
-// $('#btn_reset').click(function(){
-// 	location.reload();
+$('#btn_reset').click(function(){
+	location.reload();
 });
