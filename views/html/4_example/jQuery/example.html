@@ -13,7 +13,7 @@
 
 
    <body>
-		<!-- <ul>
+		<ul>
 		   	<li>item1</li>
 		   	<li>item2</li>
 		   	<li>item3</li>
@@ -24,7 +24,7 @@
 		   	<li>item8</li>
 		   	<li>item9</li>
 		   	<li>item10</li>
-		</ul> -->
+		</ul>
 		
 		<!--  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere arcu non auctor consequat. Sed id pellentesque metus. Donec at justo ipsum. Nullam vehicula purus dui, dapibus pulvinar felis ullamcorper sollicitudin. Praesent facilisis fermentum enim, a ultrices dolor bibendum at. In tempus ligula at risus cursus tincidunt. Ut luctus non velit vel blandit. Curabitur scelerisque ex vitae eros rhoncus, hendrerit interdum tellus sollicitudin.
 		       </p>
@@ -52,7 +52,7 @@
 
 
 
-	<!-- 	<div id="outer">
+		<div id="outer">
 	  Outer
 	  <div id="inner">
 	    Inner
@@ -61,7 +61,7 @@
 	<div id="other">
 	  Trigger the handler
 	</div>
-	<div id="log"></div> -->
+	<div id="log"></div>
 
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -75,13 +75,13 @@
      	for (var i=0; i<coll.length; i++) {
      		coll[i].style.background = 'red';
      		// coll[i].classList.add('one');
-     		// coll[i].classList.remove('one');
+     		coll[i].classList.remove('one');
      	}*/
 
      	// jQuery
      	// $('li').css('background','red');
-     	/*$('li').css('background','red').addClass('one'); // if was = add
-     	$('li').css('background','red').removeClass('one');*/
+     	// $('li').css('background','red').addClass('one'); // if was = add
+     	// $('li').css('background','red').removeClass('one');
      	// $('li').css('background','red').toggleClass('two'); // чередует класс: если его нет - добавит, если есть - удалит
      	// $('li').css('background','red'); //even ? odd ?
 
@@ -102,9 +102,9 @@
      	// console.log($('a').eq(0).attr('href')); // work with attr
      	// console.log($('a').eq(0).attr('name', 'new attr name')); // work with - attr removeAttr
 
-//      	$( "#outer" ).mouseover(function() {
-//   $( "#log" ).append( "<div>Handler for .mouseover() called.</div>" );
-// });
+     	$( "#outer" ).mouseover(function() {
+  $( "#log" ).append( "<div>Handler for .mouseover() called.</div>" );
+});
 
 
 
