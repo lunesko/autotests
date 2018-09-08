@@ -1,0 +1,45 @@
+A:link, A:visited, A:active {
+        color: #666666;
+        font-family: Tahoma;
+        font-size: 10pt;
+        text-decoration: none;
+}
+A:hover {
+        color: #000000;
+        font-family: Tahoma;
+        font-size: 10pt;
+	text-decoration: underline;
+}
+
+.first {
+        color: #333300;
+        font-size: 15pt;
+        font-family: Arial;
+        font-weight: bolder;
+}
+
+.second {
+        color: #00FFFF";
+        font-size: 11pt;
+        font-family: Verdana;
+        font-weight: bolder;
+}
+
+.third {
+        color: #040404;
+        font-size: 12pt;
+        font-family: Arial;
+        text-align: justify;
+}
+
+.fourth {
+        color: #000000;
+        font-size: 14pt;
+        font-family:Tahoma;
+}
+.fifth {
+        color: #00FFFF";
+        font-size: 9pt;
+        font-family: Verdana;
+        font-weight: normal;
+}
