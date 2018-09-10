@@ -1,0 +1,70 @@
+body{
+	background: #67E667;
+	font-size: 20px;
+}
+
+content{
+	margin: 0 auto;
+	width: 100%
+}
+
+menu{
+	background-color: #35D4A0;
+}
+
+#navbar{
+	margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+
+}
+#navbar li {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	background-color: #35D4A0;
+	padding: 15px;
+	 margin-bottom: 100px;
+}
+
+#navbar a{
+	text-decoration: none;
+	font-size: 30px;
+	color: black;
+
+}
+
+.clear {clear: both;}
+
+select{
+	background-color: #35D4A0;
+	font-size: 30px;
+	color: black;
+}
+
+#navbar li:nth-child(5){
+	padding: 14px;
+}
+
+article{
+	margin: 100px;
+	position: relative;
+top: 100px;
+}
+h1{
+margin:0 auto;
+
+
+}
+
+h2{
+	margin: 50px;
+}
+
+form{
+	margin: 0 200px;
+}
+footer{
+	margin-top: 200px; 
+}
