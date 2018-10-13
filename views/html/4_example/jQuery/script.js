@@ -1,15 +1,15 @@
 $("h2").css("color","green");
-$("h2").css("color","red");
+// $("h2").css("color","red");
 
-// $(document).ready(function(){
-// 		$("h2").css("color","green");	
-// });
+/*$(document).ready(function(){
+		$("h2").css("color","green");	
+});*/
 
 
 
-// $(function(){
-// 		$("h2").css("color","red");
-// });
+/*$(function(){
+		$("h2").css("color","red");
+});*/
 
 
 // $(document).ready(function() {
@@ -20,7 +20,7 @@ $("h2").css("color","red");
 // 	 jQuery("h2").html("Подменили текст");
 // })
 
-$("h2").html("Подменили текст");
+// $("h2").html("Подменили текст");
 
 $('#btn_start').click(function(){
 		$('#message')
