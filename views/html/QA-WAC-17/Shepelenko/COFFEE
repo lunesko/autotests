@@ -1,0 +1,63 @@
+<fieldset>
+  <legend>
+    PRIVATE LIFE
+  </legend>
+  <p>
+    <input type="image" src="https://mirpozitiva.ru/uploads/posts/2016-11/medium/1479734077_kofe10.jpg">
+  </p>
+  <p>
+    <lebel>Name</lebel>
+  </p>
+  <p>
+    <input type="text" placeholder="name">
+  </p>
+  <p>
+    <lebel>Surname</lebel>
+  </p>
+  <p>
+    <input type="text" placeholder="surname">
+  </p>
+  <p>
+    <lebel>Adress</lebel>
+  </p>
+  <p>
+    <input type="text" placeholder="adress">
+  </p>
+  <p>
+    <lebel>Age</lebel>
+  </p>
+  <p>
+    <input type="number" min="1" max="100">
+  </p>
+  <p>
+    <lebel>E-mail</lebel>
+  </p>
+  <p>
+    <input type="email" placeholder="e-mail">
+  </p>
+  <p>
+    <lebel>Password</lebel>
+  </p>
+  <p>
+    <input type="password" placeholder="password">
+  </p>
+  <p>
+    <lebel>Sex</lebel>
+  </p>
+  <p>
+    <input type="radio">Male
+  </p>
+  <p>
+    <input type="radio">Female
+  </p>
+  <p>
+    What do you want?
+  </p>
+  <p>
+    <textarea></textarea>
+  </p>
+</fieldset>
+<p>
+  <input type="submit" value="Send">
+  <input type="reset" value="Reset">
+</p>
