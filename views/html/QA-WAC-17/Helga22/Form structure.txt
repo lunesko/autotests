@@ -1,0 +1,20 @@
+
+Please fill in the following form:
+
+
+Please check several options:
+X (checked by default) Option 1 (checkbox)
+- Option 2 (checkbox)
+- Option 3 (checkbox)
+
+Please select ONE option:
+(radio button with 3 elements)
+
+Please download your file:
+
+To do this, please enter your data:
+(email+placeholder)
+(Login+placeholder)
+(Password+placeholder)
+(Submit button)
+

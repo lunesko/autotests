@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>HTML Form</title>
+   </head>
+   <body>
+    <script>
+function send(form) {
+    var result = "";
+    for (var i =0; i<form.elements.length; i++) {
+         result += "<p>" + form.elements[i].name + " : " + form.elements[i].value + " > " + form.elements[i].checked + "</p>"; 
+    }
+    document.getElementById('result').innerHTML = result;
+    return false;
+}
+</script>
+    <h2>Please fill in the following form:</h2>
+    <form onsubmit="send(this);return false;" action="Test_Form.html"  method="GET">
+        <fieldset>
+        <legend>Please check several options:</legend>
+<input type="checkbox" name="option1" value="Option_1" id="id3" checked>Option 1 
+<br>
+        <input type="checkbox" name="option2" value="Option_2" id="id4">Option 2 
+        <br>
+    <input type="checkbox" name="option3" value="Option_3" id="id4">Option 3
+    </fieldset>
+<input type="submit">
+</form>
+    
+    <div id="result"></div>
+    
+    
