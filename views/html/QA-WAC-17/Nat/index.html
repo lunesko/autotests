@@ -5,22 +5,62 @@
 </title>
 </head>
 <body style = "background-color:#FFF5EE;" text="#333366">
+    
  <h1 size="7" color = >  Registration form of participants  </h1>
+    
+    <form onsubmit="send(this);return false;" action="index.html"  method="GET">
+    
 <ul style = "margin-bottom:20px; display:flex; flex-direction:column; list-style:none; text-align:left;">
+    
 <p style = "margin:5px 0;color:#000000; font-size :16px" > 1.Enter your name </p>
  <li><input type ="text" placeholder = "Name" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px; padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+  
+<p style = "margin:5px 0;color:#000000; font-size :16px" > 2.Choose your sex </p>
+    <li><input type="radio" value="Male" name="sex" checked=""> Male </li> <li><input type="radio" value="Female" name="sex" checked=""> Female </li>
+    
 <p style = "margin:5px 0; color:#000000; font-size :16px" > 2.Enter your age </p>
  <li><input type ="text" placeholder = "Age" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px; padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+    
+ <p style = "margin:5px 0; color:#000000; font-size :16px" > 2.Enter your date of birth </p>   
+   <li> <input id="date"  type="date" name="date" style="width:160px; box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px; padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+    
 <p style = "margin:5px 0; color:#000000; font-size :16px" > 3.Enter your Email </p>
- <li><input type ="text" placeholder = "Email" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+ <li><input type ="email" placeholder = "example@email.com" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+    
 <p style = "margin:5px 0; color:#000000; font-size :16px" > 4.Enter your Telephone number </p>
- <li><input type ="text" placeholder = "Telephone" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+ <li><input type ="tel" placeholder = "+38099999999" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+    
 <p style = "margin:5px 0; color:#000000; font-size :16px" > 5.Enter your City </p>
  <li><input type ="text" placeholder = "City" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+    
 <p style = "margin:5px 0; color:#000000; font-size :16px" > 6.Enter your Country </p>
  <li><input type ="text" placeholder = "Country" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+    
 <p style = "margin:5px 0; color:#000000; font-size :16px" > 7.Enter your English level </p>
- <li><input type ="text" placeholder = "English level" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+ <li><input type ="text" placeholder = "English level"  list="mydata" style = "box-shadow: 3px 0px 8px -2px rgba(0,0,0,0.75); margin-bottom:10px;padding:10px; border:2px solid #778899;background-color:transparent; border-radius:5px"></li>
+   
+    <datalist id="mydata">
+        <option value="A1"></option>
+        <option value="A2"></option>
+        <option value="B1"></option>
+        <option value="B2"></option>
+    <option value="C1"></option>
+    <option value="C2"></option>
+    </datalist>
+    
+    <input type="submit" name="submit" value="Send" style="width: 110px; margin-top:10px; margin-left: 30px">
 </ul>
+        </form>
+    <div id="result"></div>
+    <script>
+function send(form) {
+    var result = "";
+    for (var i =0; i<form.elements.length; i++) {
+         result += "<p>" + form.elements[i].name + " : " + form.elements[i].value + " > " + form.elements[i].checked + "</p>"; 
+    }
+    document.getElementById('result').innerHTML = result;
+    return false;
+}
+</script>
 </body>
 </html>
